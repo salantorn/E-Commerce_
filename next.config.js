@@ -14,6 +14,17 @@ const nextConfig = {
       bodySizeLimit: '10mb'
     },
   },
+  // Disable static optimization for API routes
+  async headers() {
+    return [
+      {
+        source: '/api/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'no-store, must-revalidate' },
+        ],
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
