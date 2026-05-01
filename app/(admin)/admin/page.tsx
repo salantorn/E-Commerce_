@@ -8,6 +8,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = { title: "Admin Dashboard" };
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 export default async function AdminDashboard() {
   const [stats, chartData, topProducts, recentOrders] = await Promise.all([

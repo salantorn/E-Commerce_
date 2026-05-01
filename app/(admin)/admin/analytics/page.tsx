@@ -6,6 +6,8 @@ import { TrendingUp, TrendingDown, BarChart2 } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = { title: "รายงานและวิเคราะห์ | Admin" };
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 export default async function AdminAnalyticsPage() {
   const [stats, chart7, chart30, topProducts] = await Promise.all([

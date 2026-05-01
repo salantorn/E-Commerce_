@@ -7,6 +7,8 @@ import AdminProductActions from "@/components/admin/AdminProductActions";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = { title: "จัดการสินค้า | Admin" };
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 export default async function AdminProductsPage({
   searchParams,

@@ -6,6 +6,8 @@ import AdminCategoryActions from "@/components/admin/AdminCategoryActions";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = { title: "จัดการหมวดหมู่ | Admin" };
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 export default async function AdminCategoriesPage() {
   const categories = await prisma.category.findMany({

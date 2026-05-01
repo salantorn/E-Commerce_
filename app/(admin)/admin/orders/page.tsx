@@ -7,6 +7,8 @@ import { ShoppingBag } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = { title: "จัดการคำสั่งซื้อ | Admin" };
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 const STATUS_OPTIONS = [
   { value: "",           label: "ทั้งหมด"      },

@@ -5,6 +5,8 @@ import { Users } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = { title: "จัดการลูกค้า | Admin" };
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 export default async function AdminCustomersPage({
   searchParams,
