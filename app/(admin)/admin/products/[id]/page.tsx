@@ -6,6 +6,8 @@ import prisma from "@/lib/prisma";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = { title: "แก้ไขสินค้า | Admin" };
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 export default async function EditProductPage({ params }: { params: { id: string } }) {
   const [product, categories] = await Promise.all([

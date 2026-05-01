@@ -4,6 +4,8 @@ import prisma from "@/lib/prisma";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = { title: "เพิ่มสินค้าใหม่ | Admin" };
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 export default async function NewProductPage() {
   const categories = await prisma.category.findMany({

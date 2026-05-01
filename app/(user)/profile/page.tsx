@@ -6,6 +6,8 @@ import ProfileForm from "@/components/common/ProfileForm";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = { title: "โปรไฟล์ของฉัน" };
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 export default async function ProfilePage() {
   const session = await getSession();

@@ -9,6 +9,8 @@ import type { Metadata } from "next";
 import type { ProductWithDetails } from "@/types";
 
 export const metadata: Metadata = { title: "สิ่งที่อยากได้" };
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 export default async function WishlistPage() {
   const session = await getSession();
